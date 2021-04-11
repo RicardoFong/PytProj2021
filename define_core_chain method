@@ -1,7 +1,6 @@
 def chain_getter(pdb_files):
     """ expects file list as object from function get_files, outputs a generator containing a list of all chain occurrences """
 
-    ppb = CaPPBuilder()
     parser = PDBParser(PERMISSIVE = 1, QUIET=True)
 
     chains = []
