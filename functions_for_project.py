@@ -99,3 +99,40 @@ def complex_division(pdb_files):
 
 
     return complexes
+
+
+
+
+############ Sintaxis para realizar función principal por cada complex ##########################
+
+
+if __name__=="__main__":
+
+    # creating object with all the files in the directory provided
+
+
+    files = get_files(args.inPath) # Ésta es la variable de archivos en mi script, solo hay que cambiarl por la pertinente.
+
+    # calls function that builds a dictionary with name of complex as keys and file names as values
+    files_dict = complex_division(files)
+
+    # getting the identifier of the dictionary keys
+    keys = list(files_dict.keys())
+    complex = len(keys)
+
+
+    i = 0 # initializing counter
+
+    while i < complex: # make sure that program loops over each complex in the folder
+
+
+        # all the actions for files executed in this section
+        # will be executed for each complex in the folder separately, one by one
+
+        #### example, see if it works: UNCOMMENT TO TEST
+
+        # chains = chain_getter(files_dict[keys[i]])
+
+        # core = define_core_chain(chains)
+
+        # print(core)
